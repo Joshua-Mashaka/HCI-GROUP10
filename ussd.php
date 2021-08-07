@@ -16,7 +16,7 @@ if ($text == "") {
     $response = "CON 1. To Account\n";
     $response = "2. To Saved Accounts";
     $response = "3. To Phone Number";
-    $response = "4. To Other Banks";
+    $response = "END 4. To Other Banks";
     
 }
 
