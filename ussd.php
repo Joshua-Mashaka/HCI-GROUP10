@@ -6,11 +6,12 @@ $phoneNumber = $_POST["phoneNumber"];
 $text = $_POST["text"];
 
 if ($text == "") {
-    $response = "1. Balance Enquiry \n"; 
-    $response = "2. Send Money \n";
-    $response = "3. Make Payment \n";
-    $response = "4. Buy Airtime \n";
-    $response = "5. Other Service";
+    $response1 = "1. Balance Enquiry \n";
+    $response2 = "2. Send Money \n";
+    $response3 = "3. Make Payment \n";
+    $response4 = "4. Buy Airtime \n";
+    $response5 = "5. Other Service";
+
 }elseif ($text == "2") {
     $response = "1. To Account\n";
     $response = "2. To Saved Accounts";
@@ -20,6 +21,10 @@ if ($text == "") {
 }
 
 header('content-type: text/plain');
-echo $response;
+echo $response1;
+echo $response2;
+echo $response3;
+echo $response4;
+echo $response5;
 
 ?>
