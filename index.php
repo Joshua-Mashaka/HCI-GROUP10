@@ -13,15 +13,15 @@ if ($text == "") {
     $response5 = "5. Other Service";
 
 }
-// elseif ($text == "2") {
-//     $response1 = "CON 1. To Account \n";
-//     $response = "2. To Saved Accounts";
-//     $response = "3. To Phone Number";
-//     $response = "4. To Other Banks";
+elseif ($text == "2") {
+    $response1 = "CON 1. To Account \n";
+    $response = "2. To Saved Accounts";
+    $response = "3. To Phone Number";
+    $response = "4. To Other Banks";
     
-// }
+}
 elseif ($text == "3") {
-    $response1 = "END utility providers"
+    $response1 = "END utility providers \n"
 } 
 // elseif ($text == "4") {
 //     $response1 = "CON 1. Top up self \n";
