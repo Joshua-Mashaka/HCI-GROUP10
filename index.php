@@ -20,6 +20,13 @@ elseif ($text == "2") {
     $response = "4. To Other Banks";
     
 }
+elseif ($text == "3") {
+    $response1 = "CON 1. To Account \n";
+    $response = "2. To Saved Accounts";
+    $response = "3. To Phone Number";
+    $response = "4. To Other Banks";
+    
+}
 // elseif ($text == "3") {
 //     $response1 = "END utility providers \n"
 // } 
