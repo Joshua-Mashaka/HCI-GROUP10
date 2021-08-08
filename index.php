@@ -20,9 +20,9 @@ elseif ($text == "2") {
     $response = "4. To Other Banks";
     
 }
-elseif ($text == "3") {
-    $response1 = "END utility providers \n"
-} 
+// elseif ($text == "3") {
+//     $response1 = "END utility providers \n"
+// } 
 // elseif ($text == "4") {
 //     $response1 = "CON 1. Top up self \n";
 //     $response = "2. To other number";
