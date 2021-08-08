@@ -29,6 +29,9 @@ if ($text == "") {
 }elseif ($text == "2*1") {
     $response1 = "CON Enter account number";
     
+}elseif ($text == "2*1" && $text != "") {
+    $response1 = "CON Enter amount";
+    
 }
 
 header('content-type: text/plain');
