@@ -72,7 +72,7 @@ elseif ($text == "4*1") {
 }elseif ($ussd_string_exploded[0] == 4 && $ussd_string_exploded[1] == 2 && $level == 4) {
     $response1 = "CON You are trying to purchase k" .$ussd_string_exploded[3]. " airtime for " .$ussd_string_exploded[2]. ", enter pin to confirm";
     
-}elseif ($ussd_string_exploded[0] == 2 && $ussd_string_exploded[1] == 2 && $level == 5) {
+}elseif ($ussd_string_exploded[0] == 4 && $ussd_string_exploded[1] == 2 && $level == 5) {
     $response1 = "END You have successfully purchased airtime ";
     
 }
