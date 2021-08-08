@@ -55,15 +55,12 @@ if ($text == "") {
 }
 
 elseif ($text == "4*1") {
-    $response1 = "CON Top up self";
+    $response1 = "CON Enter amount";
     
 }elseif ($ussd_string_exploded[0] == 4 && $ussd_string_exploded[1] == 1 && $level == 3) {
-    $response1 = "CON Enter amount ";
-    
-}elseif ($ussd_string_exploded[0] == 4 && $ussd_string_exploded[1] == 1 && $level == 4) {
     $response1 = "CON You are trying to purchase airtime of k" .$ussd_string_exploded[2]. " to " .$phoneNumber. ", enter pin to confirm";
     
-}elseif ($ussd_string_exploded[0] == 4 && $ussd_string_exploded[1] == 1 && $level == 5) {
+}elseif ($ussd_string_exploded[0] == 4 && $ussd_string_exploded[1] == 1 && $level == 4) {
     $response1 = "END You have successfully purchased airtime ";
     
 }elseif ($text == "4*2") {
@@ -75,7 +72,7 @@ elseif ($text == "4*1") {
 }elseif ($ussd_string_exploded[0] == 4 && $ussd_string_exploded[1] == 2 && $level == 4) {
     $response1 = "CON You are trying to purchase k" .$ussd_string_exploded[3]. " airtime for " .$ussd_string_exploded[2]. ", enter pin to confirm";
     
-}elseif ($ussd_string_exploded[0] == 2 && $ussd_string_exploded[1] == 3 && $level == 5) {
+}elseif ($ussd_string_exploded[0] == 2 && $ussd_string_exploded[1] == 2 && $level == 5) {
     $response1 = "END You have successfully purchased airtime ";
     
 }
