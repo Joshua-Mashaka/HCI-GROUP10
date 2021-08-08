@@ -18,17 +18,16 @@ if ($text == "") {
     $response = "3. To Phone Number";
     $response = "4. To Other Banks";
     
-}
-elseif ($text == "3") {
-    "END utility providers"
+}elseif ($text == "3") {
+    $response = "END utility providers"
 } 
-// elseif ($text == "4") {
-//     $response1 = "CON 1. Top up self \n";
-//     $response = "2. To other number";
+elseif ($text == "4") {
+    $response1 = "CON 1. Top up self \n";
+    $response = "2. To other number";
 
-// }elseif ($text == "5") {
-//     "END other service"
-// }
+}elseif ($text == "5") {
+    $response = "END other service"
+}
 
 header('content-type: text/plain');
 echo $response1;
