@@ -12,27 +12,23 @@ if ($text == "") {
     $response4 = "4. Buy Airtime \n";
     $response5 = "5. Other Service";
 
-}
-elseif ($text == "2") {
+}elseif ($text == "2") {
     $response1 = "CON 1. To Account \n";
-    $response = "2. To Saved Accounts";
-    $response = "3. To Phone Number";
-    $response = "4. To Other Banks";
+    $response2 = "2. To Saved Accounts \n";
+    $response3 = "3. To Phone Number \n";
+    $response4 = "4. To Other Banks";
     
-}
-// elseif ($text == "3") {
-//     $response1 = "END 1. To Account \n";
-    
-// }
-elseif ($text == "3") {
+}elseif ($text == "3") {
     $response1 = "END utility providers \n";
-} 
-elseif ($text == "4") {
+}elseif ($text == "4") {
     $response1 = "CON 1. Top up self \n";
-    $response = "2. To other number";
+    $response2 = "2. To other number";
 
 }elseif ($text == "5") {
-    $response = "END other service";
+    $response1 = "END other service";
+}elseif ($text == "2*1") {
+    $response1 = "CON Enter account number";
+    
 }
 
 header('content-type: text/plain');
