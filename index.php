@@ -20,20 +20,20 @@ elseif ($text == "2") {
     $response = "4. To Other Banks";
     
 }
-elseif ($text == "3") {
-    $response1 = "END 1. To Account \n";
-    
-}
 // elseif ($text == "3") {
-//     $response1 = "END utility providers \n"
-// } 
-// elseif ($text == "4") {
-//     $response1 = "CON 1. Top up self \n";
-//     $response = "2. To other number";
-
-// }elseif ($text == "5") {
-//     $response = "END other service"
+//     $response1 = "END 1. To Account \n";
+    
 // }
+elseif ($text == "3") {
+    $response1 = "END utility providers \n";
+} 
+elseif ($text == "4") {
+    $response1 = "CON 1. Top up self \n";
+    $response = "2. To other number";
+
+}elseif ($text == "5") {
+    $response = "END other service";
+}
 
 header('content-type: text/plain');
 echo $response1;
