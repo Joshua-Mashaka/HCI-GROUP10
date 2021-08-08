@@ -20,7 +20,7 @@ if ($text == "") {
     
 }
 elseif ($text == "3") {
-    $response1 = "END utility providers"
+    $response1 = "CON utility providers"
 } 
 // elseif ($text == "4") {
 //     $response1 = "CON 1. Top up self \n";
