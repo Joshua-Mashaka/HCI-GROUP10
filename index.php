@@ -32,7 +32,7 @@ if ($text == "") {
     $response1 = "CON Enter account number";
     
 }elseif ($ussd_string_exploded[0] == 2 && $ussd_string_exploded[1] == 1 && $level == 3) {
-    $response1 = "CON Enter amount";
+    $response1 = "CON Enter amount to send to " .$ussd_string_exploded[2];
     
 }
 
