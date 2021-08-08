@@ -5,7 +5,7 @@ $serviceCode = $_POST["serviceCode"];
 $phoneNumber = $_POST["phoneNumber"];
 $text = $_POST["text"];
 $ussd_string_exploded = explode("*", $text);
-$level = count($ussd_string_explode);
+$level = count($ussd_string_exploded);
 
 if ($text == "") {
     $response1 = "CON 1. Balance Enquiry \n";
