@@ -35,7 +35,22 @@ if ($text == "") {
     $response1 = "CON Enter amount to send to " .$ussd_string_exploded[2];
     
 }elseif ($ussd_string_exploded[0] == 2 && $ussd_string_exploded[1] == 1 && $level == 4) {
-    $response1 = "CON You are trying to send " .$ussd_string_exploded[3]. " amount to " .$ussd_string_exploded[2]. ", enter pin to confirm";
+    $response1 = "CON You are trying to send k" .$ussd_string_exploded[3]. " amount to " .$ussd_string_exploded[2]. ", enter pin to confirm";
+    
+}elseif ($ussd_string_exploded[0] == 2 && $ussd_string_exploded[1] == 1 && $level == 5) {
+    $response1 = "END Successfully transferred ";
+    
+}elseif ($text == "2*3") {
+    $response1 = "CON Enter phone number";
+    
+}elseif ($ussd_string_exploded[0] == 2 && $ussd_string_exploded[3] == 1 && $level == 3) {
+    $response1 = "CON Enter amount to send to " .$ussd_string_exploded[2];
+    
+}elseif ($ussd_string_exploded[0] == 2 && $ussd_string_exploded[3] == 1 && $level == 4) {
+    $response1 = "CON You are trying to send k" .$ussd_string_exploded[3]. " amount to " .$ussd_string_exploded[2]. ", enter pin to confirm";
+    
+}elseif ($ussd_string_exploded[0] == 2 && $ussd_string_exploded[3] == 1 && $level == 5) {
+    $response1 = "END Successfully transferred ";
     
 }
 
