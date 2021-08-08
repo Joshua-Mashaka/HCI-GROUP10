@@ -4,6 +4,8 @@ $sessionId = $_POST["sessionId"];
 $serviceCode = $_POST["serviceCode"];
 $phoneNumber = $_POST["phoneNumber"];
 $text = $_POST["text"];
+$ussd_string_exploded = explode("*", $text);
+$level = count($ussd_string_explode);
 
 if ($text == "") {
     $response1 = "CON 1. Balance Enquiry \n";
@@ -29,7 +31,7 @@ if ($text == "") {
 }elseif ($text == "2*1") {
     $response1 = "CON Enter account number";
     
-}elseif ($text == "2*1* ") {
+}elseif ($ussd_string_exploded[0] == 2 && $ussd_string_exploded[1] == 1 && $level == 3) {
     $response1 = "CON Enter amount";
     
 }
