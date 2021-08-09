@@ -42,6 +42,7 @@ if ($text == "" || $text == "0") {
     $response1 = "END Successfully transferred ";
     
 }elseif ($text == "2*3") {
+    $Ltext = $text;
     $response1 = "CON Enter phone number";
     
 }elseif ($ussd_string_exploded[0] == 2 && $ussd_string_exploded[1] == 3 && $level == 3) {
