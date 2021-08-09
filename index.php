@@ -7,7 +7,7 @@ $text = $_POST["text"];
 $ussd_string_exploded = explode("*", $text);
 $level = count($ussd_string_exploded);
 
-if ($text == "") {
+if ($text == "" || $text == "0") {
     $response1 = "CON 1. Balance Enquiry \n";
     $response2 = "2. Send Money \n";
     $response3 = "3. Make Payment \n";
@@ -74,6 +74,9 @@ elseif ($text == "4*1") {
     
 }elseif ($ussd_string_exploded[0] == 4 && $ussd_string_exploded[1] == 2 && $level == 5) {
     $response1 = "END You have successfully purchased airtime ";
+    
+}elseif ($level > 0 && $text == "98") {
+    $text == "4*1";
     
 }
 
