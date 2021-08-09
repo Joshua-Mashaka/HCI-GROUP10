@@ -75,7 +75,7 @@ elseif ($text == "4*1") {
 }elseif ($ussd_string_exploded[0] == 4 && $ussd_string_exploded[1] == 2 && $level == 5) {
     $response1 = "END You have successfully purchased airtime ";
     
-}elseif ($text == $text. "98") {
+}elseif ($text == $text. "*98") {
     $text == "4*1";
     
 }
