@@ -26,7 +26,7 @@ function goToMainMenu(){
     return join("*",$ussd_string_exploded);
 }
 
-$text = goBack();
+// $text = goBack();
 
 if ($text == "") {
     $response1 = "CON 1. Balance Enquiry \n";
