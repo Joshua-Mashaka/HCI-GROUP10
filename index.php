@@ -7,7 +7,7 @@ $text = $_POST["text"];
 $ussd_string_exploded = explode("*", $text);
 $level = count($ussd_string_exploded);
 
-function goBack($text){
+function goBack(){
    // $ussd_string_exploded = explode("*",$text);
     //The while loop is used to ensure that all occurences of "98"
     //are captured        
@@ -17,7 +17,7 @@ function goBack($text){
         }
         return join("*",$ussd_string_exploded);
 }
-function goToMainMenu($text){
+function goToMainMenu(){
     // $ussd_string_exploded = explode("*",$text);
     while(array_search("99",$ussd_string_exploded, true) !=false){
     $index = array_search("99",$ussd_string_exploded, true);
@@ -98,8 +98,8 @@ elseif ($text == "4*1") {
 }
 
 header('content-type: text/plain');
-goBack($text);
-goToMainMenu($text);
+goBack();
+goToMainMenu();
 echo $response1;
 echo $response2;
 echo $response3;
