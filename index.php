@@ -24,7 +24,7 @@ function goToMainMenu(){
     array_splice($ussd_string_exploded,0,$index+1);
     }
     return join("*",$ussd_string_exploded);
-// }
+}
 
 
 if ($text == "") {
