@@ -7,24 +7,24 @@ $text = $_POST["text"];
 $ussd_string_exploded = explode("*", $text);
 $level = count($ussd_string_exploded);
 
-function goBack(){
-   // $ussd_string_exploded = explode("*",$text);
-    //The while loop is used to ensure that all occurences of "98"
-    //are captured        
-    while(array_search("98",$ussd_string_exploded, true) !=false){
-        $index = array_search("98",$ussd_string_exploded, true);
-        array_splice($ussd_string_exploded, $index-1,2);
-        }
-        return join("*",$ussd_string_exploded);
-}
-function goToMainMenu(){
-    // $ussd_string_exploded = explode("*",$text);
-    while(array_search("99",$ussd_string_exploded, true) !=false){
-    $index = array_search("99",$ussd_string_exploded, true);
-    array_splice($ussd_string_exploded,0,$index+1);
-    }
-    return join("*",$ussd_string_exploded);
-}
+// function goBack(){
+//    // $ussd_string_exploded = explode("*",$text);
+//     //The while loop is used to ensure that all occurences of "98"
+//     //are captured        
+//     while(array_search("98",$ussd_string_exploded, true) !=false){
+//         $index = array_search("98",$ussd_string_exploded, true);
+//         array_splice($ussd_string_exploded, $index-1,2);
+//         }
+//         return join("*",$ussd_string_exploded);
+// }
+// function goToMainMenu(){
+//     // $ussd_string_exploded = explode("*",$text);
+//     while(array_search("99",$ussd_string_exploded, true) !=false){
+//     $index = array_search("99",$ussd_string_exploded, true);
+//     array_splice($ussd_string_exploded,0,$index+1);
+//     }
+//     return join("*",$ussd_string_exploded);
+// }
 
 
 if ($text == "") {
@@ -98,8 +98,8 @@ elseif ($text == "4*1") {
 }
 
 header('content-type: text/plain');
-goBack();
-goToMainMenu();
+// goBack();
+// goToMainMenu();
 echo $response1;
 echo $response2;
 echo $response3;
