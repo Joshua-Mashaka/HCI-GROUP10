@@ -21,6 +21,8 @@ $level = count($ussd_string_exploded);
     }
     $text = join("*",$ussd_string_exploded);
 
+
+
 if ($text == "") {
     $response1 = "CON 1. Balance Enquiry \n";
     $response2 = "2. Send Money \n";
@@ -92,7 +94,6 @@ elseif ($text == "4*1") {
 }
 
 header('content-type: text/plain');
-// goToMainMenu();
 echo $response1;
 echo $response2;
 echo $response3;
