@@ -6,9 +6,28 @@ $phoneNumber = $_POST["phoneNumber"];
 $text = $_POST["text"];
 $ussd_string_exploded = explode("*", $text);
 $level = count($ussd_string_exploded);
-$Ltext = "";
 
-if ($text == "" || $text == "0") {
+function goBack($text){
+   // $ussd_string_exploded = explode("*",$text);
+    //The while loop is used to ensure that all occurences of "98"
+    //are captured        
+    while(array_search("98",$ussd_string_exploded, true) !=false){
+        $index = array_search("98",$ussd_string_exploded, true);
+        array_splice($ussd_string_exploded, $index-1,2);
+        }
+        return join("*",$ussd_string_exploded);
+}
+function goToMainMenu($text){
+    // $ussd_string_exploded = explode("*",$text);
+    while(array_search("99",$ussd_string_exploded, true) !=false){
+    $index = array_search("99",$ussd_string_exploded, true);
+    array_splice($ussd_string_exploded,0,$index+1);
+    }
+    return join("*",$ussd_string_exploded);
+}
+
+
+if ($text == "") {
     $response1 = "CON 1. Balance Enquiry \n";
     $response2 = "2. Send Money \n";
     $response3 = "3. Make Payment \n";
@@ -42,7 +61,6 @@ if ($text == "" || $text == "0") {
     $response1 = "END Successfully transferred ";
     
 }elseif ($text == "2*3") {
-    $Ltext = $text;
     $response1 = "CON Enter phone number";
     
 }elseif ($ussd_string_exploded[0] == 2 && $ussd_string_exploded[1] == 3 && $level == 3) {
@@ -77,12 +95,11 @@ elseif ($text == "4*1") {
 }elseif ($ussd_string_exploded[0] == 4 && $ussd_string_exploded[1] == 2 && $level == 5) {
     $response1 = "END You have successfully purchased airtime ";
     
-}elseif ($text == $Ltext. "*98") {
-    $text == "4*1";
-    
 }
 
 header('content-type: text/plain');
+goBack($text);
+goToMainMenu($text);
 echo $response1;
 echo $response2;
 echo $response3;
