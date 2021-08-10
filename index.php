@@ -18,14 +18,15 @@ function goBack(){
         return join("*",$ussd_string_exploded);
 }
 function goToMainMenu(){
-//     // $ussd_string_exploded = explode("*",$text);
+    //     // $ussd_string_exploded = explode("*",$text);
     while(array_search("99",$ussd_string_exploded, true) !=false){
-    $index = array_search("99",$ussd_string_exploded, true);
-    array_splice($ussd_string_exploded,0,$index+1);
+        $index = array_search("99",$ussd_string_exploded, true);
+        array_splice($ussd_string_exploded,0,$index+1);
     }
     return join("*",$ussd_string_exploded);
 }
 
+$text = goBack();
 
 if ($text == "") {
     $response1 = "CON 1. Balance Enquiry \n";
@@ -98,7 +99,6 @@ elseif ($text == "4*1") {
 }
 
 header('content-type: text/plain');
-goBack();
 // goToMainMenu();
 echo $response1;
 echo $response2;
