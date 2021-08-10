@@ -98,7 +98,7 @@ elseif ($text == "4*1") {
 }
 
 header('content-type: text/plain');
-// goBack();
+goBack();
 // goToMainMenu();
 echo $response1;
 echo $response2;
