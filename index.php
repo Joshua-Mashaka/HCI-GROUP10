@@ -49,6 +49,7 @@ if ($text == "") {
     $response7 = "7. MASM \n";
     $response8 = "8 Credt Card Payment \n";
     $response9 = "9. Purchase/Service \n";
+    $response10 = "10. Malawi Housing Corp \n";
 }elseif ($text == "4") {
     $response0 = "CON Please Select: \n";
     $response1 = "1. Top up self \n";
