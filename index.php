@@ -24,7 +24,7 @@ $level = count($ussd_string_exploded);
 
 
 if ($text == "") {
-    $response0 = "CON Online banking: \n";
+    $response0 = "CON Select Service: \n";
     $response1 = "1. Balance Enquiry \n";
     $response2 = "2. Send Money \n";
     $response3 = "3. Make Payment \n";
@@ -32,7 +32,7 @@ if ($text == "") {
     $response5 = "5. Other Service";
 
 }elseif ($text == "2") {
-    $response0 = "CON Select: \n";
+    $response0 = "CON Select Service: \n";
     $response1 = "1. To Account \n";
     $response2 = "2. To Saved Accounts \n";
     $response3 = "3. To Phone Number \n";
