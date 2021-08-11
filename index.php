@@ -40,7 +40,13 @@ if ($text == "") {
     
 }elseif ($text == "3") {
     $response0 = "CON Notification: \n";
-    $response1 = "END utility providers \n";
+    $response1 = "1. DStv \n";
+    $response2 = "2. Water \n";
+    $response3 = "3. Electricity \n";
+    $response4 = "4. MRA \n";
+    $response5 = "5. MyFuel \n";
+    $response6 = "6. Tuition/Fees \n";
+    $response7 = "7. MASM \n";
 }elseif ($text == "4") {
     $response0 = "CON Please Select: \n";
     $response1 = "1. Top up self \n";
