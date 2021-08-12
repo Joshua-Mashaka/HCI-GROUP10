@@ -11,8 +11,6 @@
     $service_code = $_POST['serviceCode'];
     $ussd_string= $_POST['text'];
       
-    
-
     $level = 0;    
     $ussd_string_explode = explode("*", $ussd_string);  
     if($ussd_string != ""){  
