@@ -78,4 +78,79 @@
              }
     }
 
+    function Make_Payments($details,$phone){  
+      
+         if (count($details)==1)
+          {  
+            $ussd_text ="1. ESCOM \n 2. GOtv \n 3. WATER \n 4. Tuition \n 5. Masm \n 6. MHC\n 7. Others \n"; 
+    ussd_proceed($ussd_text);//calling ussd_proceed function
+          }  
+    }
+
+    function Buy_Airtime($details,$phone) {  
+
+      if(count($details) == 1){  
+      $ussd_text = "Select an option \n 1. Top up self  \n 2. other number \n "; 
+      ussd_proceed($ussd_text);  
+     }  
+
+     else if(count($details) == 2){  
+             $Choice=$details[1]; 
+
+         if($Choice=="1"){  
+         
+             $ussd_text="Enter amount";  
+             ussd_proceed($ussd_text);  
+           
+             
+             if (count($details)==3)
+              {  
+                $ussd_text="You are trying to buy airtime ". $ussd_string. " enter pin to proceed ";  
+                ussd_proceed($ussd_text);  
+              }
+ 
+             if (count($details)==4)
+              {  
+                $ussd_text="transaction was successfully made";  
+                ussd_stop($ussd_text);  
+              }
+
+
+
+         }else if($Choice=="2"){  
+
+
+           $ussd_text="Enter phone number";  
+             ussd_proceed($ussd_text);  
+           
+           if(count($details)== 3)
+           {
+               
+               $ussd_text = "Enter amount";
+               ussd_proceed($ussd_text);
+             }
+             
+             if (count($details)==4)
+              {  
+                $ussd_text="You are trying to buy airtime ". $ussd_string. " enter pin to proceed ";  
+                ussd_proceed($ussd_text);  
+              }
+ 
+             if (count($details)==5)
+              {  
+                $ussd_text="transaction was successfully made";  
+                ussd_stop($ussd_text);  
+              }
+
+
+         }
+
+     }  
+
+  else {  
+         $ussd_text = "wrong input";  
+             ussd_proceed($ussd_text);       
+       }  
+ }
+
  ?>  
