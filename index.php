@@ -25,7 +25,7 @@ $level = count($ussd_string_exploded);
 
 
 if ($text == "") {
-    $response0 = "CON Online banking: \n";
+    $response0 = "CON Select Service: \n";
     $response1 = "1. Balance Enquiry \n";
     $response2 = "2. Send Money \n";
     $response3 = "3. Make Payment \n";
@@ -33,7 +33,7 @@ if ($text == "") {
     $response5 = "5. Other Service";
 
 }elseif ($text == "2") {
-    $response0 = "CON Select: \n";
+    $response0 = "CON Select Service: \n";
     $response1 = "1. To Account \n";
     $response2 = "2. To Saved Accounts \n";
     $response3 = "3. To Phone Number \n";
@@ -41,7 +41,18 @@ if ($text == "") {
     
 }elseif ($text == "3") {
     $response0 = "CON Notification: \n";
-    $response1 = "END utility providers \n";
+    $response1 = "1. DStv \n";
+    $response2 = "2. Water \n";
+    $response3 = "3. Electricity \n";
+    $response4 = "4. MRA \n";
+    $response5 = "5. MyFuel \n";
+    $response6 = "6. Tuition/Fees \n";
+    $response7 = "7. MASM \n";
+    $response8 = "8 Credt Card Payment \n";
+    $response9 = "9. Purchase/Service \n";
+    $response10 = "10. Malawi Housing Corp \n";
+    $response11 = "11. ICAM \n";
+    $responseN = "N. Next \n";
 }elseif ($text == "4") {
     $response0 = "CON Please Select: \n";
     $response1 = "1. Top up self \n";
@@ -121,5 +132,11 @@ echo $response2;
 echo $response3;
 echo $response4;
 echo $response5;
-
+echo $response6;
+echo $response7;
+echo $response8;
+echo $response9;
+echo $response10;
+echo $response11;
+echo $responseN;
 ?>
