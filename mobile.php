@@ -80,4 +80,13 @@
              }
     }
 
+    function Make_Payments($details,$phone){  
+      
+         if (count($details)==1)
+          {  
+            $ussd_text ="1. ESCOM \n 2. GOtv \n 3. WATER \n 4. Tuition \n 5. Masm \n 6. MHC\n 7. Others \n"; 
+    ussd_proceed($ussd_text);//calling ussd_proceed function
+          }  
+    }
+
  ?>  
