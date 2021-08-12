@@ -28,6 +28,20 @@
                 case 1:  
                 Cash_Out($ussd_string_explode,$phone);  
                 break; 
+                // If user selected 2
+                case 2: 
+                Make_Payments($ussd_string_explode,$phone);  
+                break;  
+                 
+                 // If user selected 3
+                  case 3:  
+                    Make_Payments($ussd_string_explode,$phone,$db);  
+                  break;
+
+                 // If user selected 4
+                  case 4:  
+                    Buy_Airtime($ussd_string_explode,$phone,$db);  
+                  break; 
                
             }  
     }  
